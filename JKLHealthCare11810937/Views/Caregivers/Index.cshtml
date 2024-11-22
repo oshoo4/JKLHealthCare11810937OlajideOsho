@@ -1,0 +1,54 @@
+@using JKLHealthCare11810937.Helpers
+@model IEnumerable<JKLHealthCare11810937.Models.DBModels.Caregiver>
+
+@{
+    ViewData["Title"] = "Caregivers";
+}
+
+<h1>Caregivers</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qualifications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Availability)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualifications)
+            </td>
+            <td>
+                @EnumHelper.GetDisplayName(Enum.Parse<AvailabilityOption>(item.Availability))
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CaregiverId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CaregiverId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CaregiverId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

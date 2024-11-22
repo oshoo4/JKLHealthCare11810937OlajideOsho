@@ -1,0 +1,13 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+.vs/
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+
+# Other
+*.db

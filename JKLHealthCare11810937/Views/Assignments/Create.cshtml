@@ -1,0 +1,53 @@
+@model JKLHealthCare11810937.Models.DBModels.Assignment
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Assignment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <span asp-validation-for="CaregiverId" class="text-danger"></span>
+            <span asp-validation-for="PatientId" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="CaregiverId" class="control-label">Caregiver</label>
+                <select asp-for="CaregiverId" class="form-control" asp-items="ViewBag.CaregiverId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PatientId" class="control-label">Patient</label>
+                <select asp-for="PatientId" class="form-control" asp-items="ViewBag.PatientId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" type="datetime-local" class="form-control"
+                    min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" type="datetime-local" class="form-control" id="EndDateInput" disabled />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        <script src="~/js/assignment-create.js"></script>
+    }
+}

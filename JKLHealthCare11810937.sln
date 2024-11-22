@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JKLHealthCare11810937", "JKLHealthCare11810937\JKLHealthCare11810937.csproj", "{A1286F0F-0E0A-40C2-A908-E6613C02D7E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JKLHealthCare11810937.Tests", "JKLHealthCare11810937.Tests\JKLHealthCare11810937.Tests.csproj", "{98765432-1FED-CBA9-8765-432101234567}"
+EndProject 
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1286F0F-0E0A-40C2-A908-E6613C02D7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1286F0F-0E0A-40C2-A908-E6613C02D7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1286F0F-0E0A-40C2-A908-E6613C02D7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1286F0F-0E0A-40C2-A908-E6613C02D7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A791AF8C-E11B-49DD-9BC9-5820D5B0A58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A791AF8C-E11B-49DD-9BC9-5820D5B0A58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A791AF8C-E11B-49DD-9BC9-5820D5B0A58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A791AF8C-E11B-49DD-9BC9-5820D5B0A58D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84C5B87-1B0D-4B53-BD87-E4CABDEFA09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84C5B87-1B0D-4B53-BD87-E4CABDEFA09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84C5B87-1B0D-4B53-BD87-E4CABDEFA09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84C5B87-1B0D-4B53-BD87-E4CABDEFA09E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84B40EF1-AC46-42B9-B4FB-5475DFF7288F}
+	EndGlobalSection
+EndGlobal

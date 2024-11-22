@@ -1,0 +1,53 @@
+@model IEnumerable<JKLHealthCare11810937.Models.DBModels.Assignment>
+
+@{
+    ViewData["Title"] = "Assignments";
+}
+
+<h1>Assignments</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Caregiver)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caregiver.Name) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient.Name) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate, "{0:dddd, dd MMMM yyyy HH:mm}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate, "{0:dddd, dd MMMM yyyy HH:mm}")
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AssignmentId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AssignmentId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AssignmentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
